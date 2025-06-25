@@ -46,7 +46,7 @@ If you're comfortable with the command line, you can use Git to manage this repo
 -   **Clone the repository** (download a copy to your computer):
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/NAME0x0/Apex_Directory_Structure.git
     ```
 
 -   **Add new files** to be tracked by Git:
