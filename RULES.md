@@ -27,6 +27,7 @@ A comprehensive guide to using and maintaining your `E:\` directory taxonomy. Fo
 
 - **00_INBOX\_TO_PROCESS**  
   - All new downloads, screenshots, email attachments, and temporary files must land here first.
+  - **Automation**: Use the `automation\add_to_inbox.bat` script (via the `central_hub.bat`) to quickly move files here from anywhere on your system.
 
 - **00_INBOX\_STAGING**  
   - After a quick review, move items here while deciding their final home.  
@@ -54,6 +55,8 @@ A comprehensive guide to using and maintaining your `E:\` directory taxonomy. Fo
 
 ### 4.1 Active Projects (`_ACTIVE`)
 
+- **Automation**: Create new projects using the `automation\manage_projects.bat` script from the `central_hub.bat`. This ensures the correct folder structure is created automatically.
+
 - **COMMISSIONED_[Client]_[Name]/**  
   - Always begin with `COMMISSIONED_`.  
   - Five subfolders numbered `0_`→`4_` dictate workflow stage.  
@@ -67,6 +70,8 @@ A comprehensive guide to using and maintaining your `E:\` directory taxonomy. Fo
   - Prefix `PERSONAL_` to distinguish personal side-projects.
 
 ### 4.2 Archived Projects (`_ARCHIVED`)
+
+- **Automation**: Archive completed projects using the `automation\archive_project.bat` script from the `central_hub.bat`. This will move the project folder to the correct archive location.
 
 - Mirror `_ACTIVE` naming but no longer modify contents.  
 - Use for paused or fully completed work.  
@@ -87,6 +92,7 @@ A comprehensive guide to using and maintaining your `E:\` directory taxonomy. Fo
     3. `Labs`  
     4. `Assignments`  
     5. `Notes`
+  - **Automation**: Use the `automation\setup_new_course.bat` script from the `central_hub.bat` to create this structure instantly.
 
 - **Research & Skill Development**  
   - Maintain clear separation: `UNIVERSITY_RESEARCH`, `SKILL_DEVELOPMENT`, `INTERESTS`.
@@ -94,6 +100,8 @@ A comprehensive guide to using and maintaining your `E:\` directory taxonomy. Fo
 ---
 
 ## 6. Resources (`04_RESOURCES`)
+
+- **Automation**: Use the `automation\create_resource_note.bat` script from the `central_hub.bat` to quickly create new notes in the appropriate resource category.
 
 - **41_KNOWLEDGE_BANK**  
   - Articles, papers, books, courses, quotes.  
@@ -118,6 +126,7 @@ A comprehensive guide to using and maintaining your `E:\` directory taxonomy. Fo
 
 - **_DRAFTS_AND_IDEAS**  
   - Active work-in-progress: sketches, mind-maps, unpolished drafts.
+  - **Automation**: Use the `automation\quick_capture.bat` script from the `central_hub.bat` to create a timestamped note for quick ideas.
 
 - **_FINAL**  
   - Only polished, shareable outputs.  
@@ -143,24 +152,26 @@ A comprehensive guide to using and maintaining your `E:\` directory taxonomy. Fo
 
 ## 9. Maintenance & Automation
 
-1. **Daily**  
-   - Empty `00_INBOX\_TO_PROCESS` → `00_INBOX\_STAGING`.  
-   - Confirm no files older than 7 days remain in `_STAGING`.
+This workspace includes a powerful **Automation Hub** (`central_hub.bat`) to simplify maintenance. Run it by double-clicking the file in the root directory. It provides a graphical interface to run all the scripts mentioned in these rules.
 
-2. **Weekly**  
-   - File everything in `_STAGING` to final destinations.  
-   - Review `_ACTIVE` projects for progress; archive if dormant > 30 days.
+The following is a recommended maintenance schedule using the hub:
 
-3. **Monthly**  
-   - Run disk usage report on top 5 largest folders; archive or delete obsolete items.
+1. **Daily**
+   - Use the **"Add File to Inbox"** automation whenever you download or create a new file that needs to be processed.
+   - Use the **"Quick Capture"** automation to jot down fleeting ideas.
 
-4. **Quarterly**  
-   - Backup `E:\` to external drive or cloud.  
-   - Validate integrity of `90_VAULT` (checksum verification).
+2. **Weekly**
+   - Run the **"Weekly Review"** automation. This will open the key folders (`_STAGING`, `_ACTIVE` projects, `_ACTIVE` goals) that you need to review.
+   - Process everything in `00_INBOX\_STAGING`.
+   - Review active projects. If a project is complete, use the **"Archive Project"** automation.
 
-5. **Yearly**  
-   - Create snapshots for `92_AREAS_ARCHIVE` and `91_PROJECTS_ARCHIVE`.  
-   - Purge `01_HORIZONS\20_GOALS\_ACHIEVED` entries older than 5 years.
+3. **As Needed**
+   - **"Create New Project"**: When starting a new project.
+   - **"Setup New Course"**: When enrolling in a new university course.
+   - **"Create Resource Note"**: When you want to add a new piece of knowledge to your `04_RESOURCES`.
+   - **"Backup Workspace"**: Run this periodically (e.g., monthly or quarterly) to create a zip archive of your entire workspace on your Desktop.
+
+This automated approach replaces most manual maintenance, ensuring the system stays clean and organized with minimal effort.
 
 ---
 

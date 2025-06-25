@@ -67,6 +67,22 @@ If you're comfortable with the command line, you can use Git to manage this repo
     git push
     ```
 
+## Automation Hub: Your Control Panel
+
+To make managing this system even easier, this repository includes a powerful **Automation Hub**. It's a simple graphical interface that gives you one-click access to common tasks, so you can keep your digital brain organized without needing to use the command line.
+
+**To launch the hub, simply double-click the `central_hub.bat` file in the root directory.**
+
+This will open a control panel with buttons for various automations, such as:
+
+- **Adding files** to your inbox
+- **Creating new projects** with the correct folder structure
+- **Archiving** old projects
+- **Backing up** your entire workspace
+- And much more!
+
+This hub is designed for everyone, whether you're a technical user or not. It's the fastest way to perform routine maintenance and keep your system in perfect order.
+
 ## Rules and Maintenance
 
 For more detailed guidelines on file naming, folder structure, and how to maintain this system over time, please refer to the `RULES.md` file.
